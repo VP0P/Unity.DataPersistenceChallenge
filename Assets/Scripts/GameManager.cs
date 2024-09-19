@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public TMP_InputField PlayerName;
 
     private void Awake()
     {
@@ -26,17 +28,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void ExitGame()
     {
-        
+#if (UNITY_EDITOR)
+        EditorApplication.ExitPlaymode();
+#else
+        Application.Quit();
+#endif
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     
 }
