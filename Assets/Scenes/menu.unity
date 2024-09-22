@@ -405,6 +405,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameInputField: {fileID: 1338237961}
+  scoreText: {fileID: 1029748948}
+  score: 0
   PlayerName: 
 --- !u!4 &462012575
 Transform:
@@ -810,7 +812,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Best Score: Name: 0'
+  m_text: 'Best Score: : 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

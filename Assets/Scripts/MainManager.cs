@@ -17,7 +17,6 @@ public class MainManager : MonoBehaviour
     private int m_Points;
     
     private bool m_GameOver = false;
-
     
     // Start is called before the first frame update
     void Start()
@@ -55,9 +54,19 @@ public class MainManager : MonoBehaviour
         }
         else if (m_GameOver)
         {
+            if(m_Points > GameManager.Instance.highScore)
+            {
+                GameManager.Instance.highScore = m_Points;
+            }
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                GameManager.Instance.ExitGame();
             }
         }
     }
